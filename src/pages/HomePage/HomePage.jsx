@@ -8,6 +8,7 @@ import BoardsList from '../../components/BoardList/BoardList';
 
 import DocumentTitle from '../../components/DocumentTitle';
 import AppBar from '../../components/AppBar/AppBar';
+import SupportComponent from '../../components/Forms/SupportComponent/SupportComponent';
 // import css from './HomePage.module.css';
 
 export default function HomePage() {
@@ -37,6 +38,7 @@ export default function HomePage() {
       {isLoading && <p>Loading boads...</p>}
       {error && <p>{error}</p>}
       <BoardsList />
+      <SupportComponent />
     </>
   );
 }

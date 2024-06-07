@@ -1,12 +1,14 @@
 import { useState } from 'react';
-import Button from '../UI/Button/Button.jsx';
-import ModalWindow from '../UI/ModalWindow/ModalWindow.jsx';
+import Button from '../Button/Button.jsx';
+
+import ModalWindow from '../ModalWindow/ModalWindow.jsx';
 
 const ModalComponent = ({
   formComponent: FormComponent,
   onSubmit,
   buttonText,
   modalTitle,
+  buttonWidth,
 }) => {
   const [isVisible, setIsVisible] = useState(false);
 
@@ -25,6 +27,7 @@ const ModalComponent = ({
         icon="icon-plus"
         text={buttonText}
         big={true}
+        width={buttonWidth}
         onClick={handleClick}
       />
       <ModalWindow
