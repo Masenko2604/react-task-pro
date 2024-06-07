@@ -1,14 +1,25 @@
-import styles from './ModalWindow.module.css';
-import clsx from 'clsx';
+import css from './ModalWindow.module.css';
 
-const ModalWindow = ({ children, visible, setVisible }) => {
-  const classStyle = clsx(styles.modal, { [styles.active]: visible });
+const ModalWindow = ({ visible, setVisible, title, children }) => {
+  if (!visible) return null;
+
+  const handleClose = () => {
+    setVisible(false);
+  };
+
   return (
-    <div className={classStyle} onClick={() => setVisible(false)}>
-      <div className={styles.modalContent} onClick={e => e.stopPropagation()}>
-        {children}
+    <div className={css.modal} onClick={handleClose}>
+      <div className={css.modalContent} onClick={e => e.stopPropagation()}>
+        <div className={css.modalHeader}>
+          <h2>{title}</h2>
+          <span className={css.close} onClick={handleClose}>
+            &times;
+          </span>
+        </div>
+        <div className={css.modalBody}>{children}</div>
       </div>
     </div>
   );
 };
+
 export default ModalWindow;
