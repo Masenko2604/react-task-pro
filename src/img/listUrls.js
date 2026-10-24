@@ -21,7 +21,7 @@ const imgsURL = [
     imgUrl_desktop_2x:
       'https://res.cloudinary.com/dirtbd4yk/image/upload/v1718033974/theme02_desktop_2x_w2rg0x.jpg',
     imgUrl_desktop_1x:
-      'https://res.cloudinary.com/dirtbd4yk/image/upload/v1718033974/theme02_desktop_1x_m1utoh.jpg\n',
+      'https://res.cloudinary.com/dirtbd4yk/image/upload/v1718033974/theme02_desktop_1x_m1utoh.jpg',
     imgUrl_mobile_1x:
       'https://res.cloudinary.com/dirtbd4yk/image/upload/v1718040181/theme02_mobile_1x_f5oqj7.jpg',
     imgUrl_mobile_2x:
